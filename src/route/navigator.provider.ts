@@ -1,36 +1,53 @@
-import { ROUTE } from "./param.type";
+import { navigateTo, reLaunch, switchTab } from '@tarojs/router';
 
+import { queryString } from '@utils/qs';
 
-export async function navi<T extends ROUTE>(route: T, params?: RouterParams[T], shouldRelaunch?: boolean) {
-  // 未传入route跳转到首页
-  if (!route) {
-    relaunchToIndex();
-    return;
-  }
+import ROUTE_ALIASES_MAP from './aliases_to_path.type';
+import RouterParams, { ROUTE } from './param.type';
 
-  let page = ROUTE_ALIASES_MAP[route];
+export async function navi<T extends ROUTE>(
+    route: T,
+    params?: RouterParams[T],
+    shouldRelaunch?: boolean,
+) {
+    // 未传入route跳转到首页
+    if (!route) {
+        relaunchToIndex();
+        return;
+    }
 
-  if (!page) {
-    console.error('获取路由配置失败 ', page);
-    return;
-  }
+    let page = ROUTE_ALIASES_MAP[route];
 
-  const url = `${page}${queryString(params)}`;
+    if (!page) {
+        console.error('获取路由配置失败 ', page);
+        return;
+    }
 
-  console.log('跳转路由', page);
-  params && console.table(params);
+    const url = `${page}${queryString(params)}`;
 
-  if (shouldRelaunch) {
-    reLaunch({ url });
-    return;
-  }
+    console.log('跳转路由', page);
+    params && console.table(params);
 
-  navigateTo({
-    url,
-    fail: () => {
-      switchTab({
-        url: page,
-      });
-    },
-  });
+    if (shouldRelaunch) {
+        reLaunch({ url });
+        return;
+    }
+
+    navigateTo({
+        url,
+        fail: () => {
+            switchTab({
+                url: page,
+            });
+        },
+    });
+}
+
+/**
+ * 重启到首页
+ */
+export function relaunchToIndex() {
+    reLaunch({
+        url: ROUTE_ALIASES_MAP.index,
+    });
 }

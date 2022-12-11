@@ -13,12 +13,15 @@ export default function Footer() {
         { label: '我的', path: '/my' },
     ];
     return (
-
         <View className='footer'>
             <View className='flex-wrp'>
                 {routeList.map((i) => {
                     return (
-                        <View className='flex-item demo-text-1' key={i.path} onClick={} >
+                        <View
+                          className='flex-item demo-text-1'
+                          key={i.path}
+                          onClick={() => console.log(i.label)}
+                        >
                             {i.label}
                         </View>
                     );
