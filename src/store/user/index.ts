@@ -7,7 +7,7 @@ interface ImSliceState {
 const user = createSlice({
   name: 'user',
   initialState: {
-    name: ''
+    name: 'xiaoming'
   } as ImSliceState,
   reducers: {},
 });
