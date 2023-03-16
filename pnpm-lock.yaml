@@ -28,6 +28,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
   babel-preset-taro: 3.5.8
+  clsx: ^1.2.1
   eslint: ^8.12.0
   eslint-config-taro: 3.5.8
   eslint-plugin-import: ^2.12.0
@@ -59,6 +60,7 @@ dependencies:
   '@tarojs/shared': 3.5.8
   '@tarojs/taro': 3.5.8_@types+react@18.0.25
   '@tarojs/taro-h5': 3.5.8_@types+react@18.0.25
+  clsx: 1.2.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.5_2zx2umvpluuhvlq44va5bta2da
@@ -4290,6 +4292,11 @@ packages:
       process-nextick-args: 2.0.1
       readable-stream: 2.3.7
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /co/4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
