@@ -41,16 +41,19 @@
         "src/service/*"
       ],
       "@store": [
-        "src/store"
-      ],
-      "@store/*": [
         "src/store/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
       ],
       "@type/*": [
         "src/types/*"
       ],
       "@utils/*": [
         "src/utils/*"
+      ],
+      "@/*": [
+        "src/*"
       ]
     },
   },

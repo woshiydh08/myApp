@@ -1,3 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '首页11'
-})
+    navigationBarTitleText: '文章',
+    usingComponents: {},
+});

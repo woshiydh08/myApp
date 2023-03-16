@@ -34,11 +34,13 @@ specifiers:
   eslint-plugin-import: ^2.12.0
   eslint-plugin-react: ^7.8.2
   eslint-plugin-react-hooks: ^4.2.0
+  mini-program-iconfont-cli: ^0.6.1
   react: ^18.0.0
   react-dom: ^18.0.0
   react-redux: ^8.0.5
   react-refresh: ^0.11.0
   stylelint: ^14.4.0
+  taro-iconfont-cli: ^3.3.0
   typescript: ^4.1.0
   webpack: 5.69.0
 
@@ -81,8 +83,10 @@ devDependencies:
   eslint-plugin-import: 2.26.0_vbnhqcxlbs7ynbxw44hu2vq7eq
   eslint-plugin-react: 7.31.11_eslint@8.28.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.28.0
+  mini-program-iconfont-cli: 0.6.1
   react-refresh: 0.11.0
   stylelint: 14.15.0
+  taro-iconfont-cli: 3.3.0_d6n6q7sfhnidtuprm7rta37op4
   typescript: 4.9.3
   webpack: 5.69.0
 
@@ -3294,6 +3298,15 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
 
+  /axios/0.19.2:
+    resolution: {integrity: sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==}
+    deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+    dependencies:
+      follow-redirects: 1.5.10
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /babel-code-frame/6.26.0:
     resolution: {integrity: sha512-XqYMR2dfdGMW+hd0IUZ2PwK+fGeFkOxZJ0wY+JaQAHzt1Zx8LcvpiZD2NiGkEG8qx0CfkAOr5xt76d1e8vG90g==}
     dependencies:
@@ -4343,6 +4356,11 @@ packages:
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
+    dev: true
+
+  /colors/1.4.0:
+    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
+    engines: {node: '>=0.1.90'}
     dev: true
 
   /combined-stream/1.0.8:
@@ -6490,6 +6508,15 @@ packages:
         optional: true
     dev: true
 
+  /follow-redirects/1.5.10:
+    resolution: {integrity: sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==}
+    engines: {node: '>=4.0'}
+    dependencies:
+      debug: 3.1.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /for-in/1.0.2:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==}
     engines: {node: '>=0.10.0'}
@@ -7236,6 +7263,17 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /iconfont-parser/1.0.0:
+    resolution: {integrity: sha512-3RJceYHEjaqYyeDdfSAb1vP1x1Eb7ZtC9Xwetj+axm85sBlJU7HMvdNLVpwm/3g5eghYOdkQK+epUITZGAIqKQ==}
+    dependencies:
+      axios: 0.19.2
+      colors: 1.4.0
+      tslib: 1.14.1
+      xml2js: 0.4.23
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /iconv-lite/0.4.24:
@@ -8552,7 +8590,7 @@ packages:
       decamelize: 1.2.0
       loud-rejection: 1.6.0
       map-obj: 1.0.1
-      minimist: 1.2.5
+      minimist: 1.2.7
       normalize-package-data: 2.5.0
       object-assign: 4.1.1
       read-pkg-up: 1.0.1
@@ -8723,6 +8761,22 @@ packages:
       webpack: 5.69.0
     dev: true
 
+  /mini-program-iconfont-cli/0.6.1:
+    resolution: {integrity: sha512-69FsU+tSevwmHBiL55535Hfh1q0ciRpNyYtiTBZw2bvw9lvW3N/SCTg395P0rkisWMqf1Ki9VYIWeaONvNWy2Q==}
+    hasBin: true
+    dependencies:
+      axios: 0.19.2
+      colors: 1.4.0
+      fs-extra: 8.1.0
+      glob: 7.2.3
+      minimist: 1.2.7
+      mkdirp: 0.5.6
+      tslib: 1.14.1
+      xml2js: 0.4.23
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /minimalistic-assert/1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
     dev: true
@@ -8761,8 +8815,8 @@ packages:
     resolution: {integrity: sha512-xwK3PzhhxnfWqDfBikHLdAbj7Wy4F887nBcQrzwuF758Fw2qC4ivpKPL9t0uJZk5QYnU28+NqA7Q3lzYGMHQnA==}
     dev: true
 
-  /miniprogram-compiler/0.2.1:
-    resolution: {integrity: sha512-AHQgJFTnVPMcVBUUdKHlCRC3guK212XkWME0awMQiUgpzp/eIbb3jgFdkl3ib9nDbbEK+m2fSBs0++vwetWJ9Q==}
+  /miniprogram-compiler/0.2.2:
+    resolution: {integrity: sha512-fiJXv/15jCcRAU8YKcO7S7fkPKLa5ZBgpLN+d6B3r3KMktM5tAkDEQ+zm6aTfNoHurYOHcRyPyGf26gqQXlFXg==}
     dependencies:
       glob: 7.2.3
       unescape-js: 1.1.4
@@ -8778,7 +8832,7 @@ packages:
       csso: 3.5.1
       j-component: 1.4.6
       less: 3.13.1
-      miniprogram-compiler: 0.2.1
+      miniprogram-compiler: 0.2.2
       postcss: 7.0.39
     dev: true
 
@@ -10279,7 +10333,7 @@ packages:
     dependencies:
       deep-extend: 0.6.0
       ini: 1.3.8
-      minimist: 1.2.5
+      minimist: 1.2.7
       strip-json-comments: 2.0.1
     dev: true
 
@@ -10293,12 +10347,50 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-iconfont-cli/2.0.2_react@18.2.0:
+    resolution: {integrity: sha512-43NP+dsk08XwJf8oXfrDwHk1WeE76vy1Xzbd2zz7WjjxsdblF9h/oalFMPclZSibIirwsckz3L0IV+42Yu//iQ==}
+    hasBin: true
+    peerDependencies:
+      react: '*'
+    dependencies:
+      colors: 1.4.0
+      glob: 7.2.3
+      iconfont-parser: 1.0.0
+      lodash: 4.17.21
+      minimist: 1.2.7
+      mkdirp: 0.5.6
+      react: 18.2.0
+      tslib: 1.14.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
+
+  /react-native-iconfont-cli/2.2.4_react@18.2.0:
+    resolution: {integrity: sha512-qTjfHG2f/sc3/YKWZJvIJk/SwiTu8C9/SvtoLxRX+GM/6pvOJq0ge6rcV3vTh4s3QJDuNDOD6+a4hGD6vv2vSg==}
+    hasBin: true
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+      react-native-svg: '>=9.7.0'
+    dependencies:
+      colors: 1.4.0
+      glob: 7.2.3
+      iconfont-parser: 1.0.0
+      lodash: 4.17.21
+      minimist: 1.2.7
+      mkdirp: 0.5.6
+      react: 18.2.0
+      tslib: 1.14.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /react-reconciler/0.27.0_react@18.2.0:
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
@@ -10357,7 +10449,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -11863,6 +11954,29 @@ packages:
       css-color-keywords: 1.0.0
       css-mediaquery: 0.1.2
       postcss-value-parser: 3.3.1
+    dev: true
+
+  /taro-iconfont-cli/3.3.0_d6n6q7sfhnidtuprm7rta37op4:
+    resolution: {integrity: sha512-lkZE/zaL0J3a6ymlUp1sMBiM8krJkDh0ZsrzB5FM2IGdgQO1/4Vs7N2hzTEVZ7EZoV/6hBqL0YwzTXg4MpuJMg==}
+    hasBin: true
+    peerDependencies:
+      '@tarojs/taro': ^3.0.8
+    dependencies:
+      '@tarojs/taro': 3.5.8_@types+react@18.0.25
+      colors: 1.4.0
+      fs-extra: 8.1.0
+      iconfont-parser: 1.0.0
+      mini-program-iconfont-cli: 0.6.1
+      minimist: 1.2.7
+      mkdirp: 0.5.6
+      react-iconfont-cli: 2.0.2_react@18.2.0
+      react-native-iconfont-cli: 2.2.4_react@18.2.0
+      tslib: 2.4.1
+    transitivePeerDependencies:
+      - react
+      - react-native
+      - react-native-svg
+      - supports-color
     dev: true
 
   /term-size/1.2.0:

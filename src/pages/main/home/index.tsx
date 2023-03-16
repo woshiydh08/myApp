@@ -1,5 +1,5 @@
 // import { Component, PropsWithChildren } from "react";
-import { Text, View } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import {
     useDidHide,
     useDidShow,
@@ -11,7 +11,7 @@ import {
     useUnload,
 } from '@tarojs/taro';
 
-import Footer from '@components/common/footer';
+import IconFont from '@components/iconfont';
 
 import './index.less';
 
@@ -44,8 +44,10 @@ export default function Index() {
     });
     return (
         <View className='index'>
-            <Text>这是首页</Text>
-            <Footer />
+            <view>
+                <IconFont name='icon-wode'  size={40} />
+            </view>
+            <View>123111111</View>
         </View>
     );
 }

@@ -23,8 +23,10 @@ const config = {
     '@pages': path.resolve(__dirname, '..', 'src/pages'),
     '@service': path.resolve(__dirname, '..', 'src/service'),
     '@store': path.resolve(__dirname, '..', 'src/store'),
+    '@assets': path.resolve(__dirname, '..', 'src/assets'),
     '@type': path.resolve(__dirname, '..', 'src/types'),
     '@utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   copy: {
     patterns: [

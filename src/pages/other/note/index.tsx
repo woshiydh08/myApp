@@ -9,8 +9,7 @@ import './index.less';
 export default function Index() {
     return (
         <View className='index'>
-            <Text>这是资讯</Text>
-            {/* <Footer /> */}
+            <View>这是笔记</View>
         </View>
     );
 }
