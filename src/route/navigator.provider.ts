@@ -25,7 +25,6 @@ export async function navi<T extends ROUTE>(
 
     const url = `${page}${queryString(params)}`;
 
-    console.log('跳转路由', page);
     params && console.table(params);
 
     if (shouldRelaunch) {
@@ -48,6 +47,6 @@ export async function navi<T extends ROUTE>(
  */
 export function relaunchToIndex() {
     reLaunch({
-        url: ROUTE_ALIASES_MAP.index,
+        url: ROUTE_ALIASES_MAP.home,
     });
 }

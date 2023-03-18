@@ -3,9 +3,9 @@ import { useGlobalIconFont } from './components/iconfont/helper';
 export default defineAppConfig({
     pages: [
         'pages/main/mine/index',
-        'pages/other/note/index',
         'pages/main/home/index',
-        'pages/main/articles/index'
+        'pages/main/articles/index',
+        'pages/other/note/index',
     ],
     tabBar: {
         custom: true,

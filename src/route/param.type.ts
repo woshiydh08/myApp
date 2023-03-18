@@ -1,8 +1,13 @@
 export enum ROUTE {
-    chat = 'chat',
-    index = 'index',
+    home = 'home',
+    articles = 'articles',
+    mine = 'mine',
+    note = 'note',
 }
+
 export default interface RouterParams extends Record<ROUTE, any> {
-    [ROUTE.chat]: { id: any; project?: any };
-    [ROUTE.index]: {};
+    [ROUTE.home]: {};
+    [ROUTE.articles]: { id: any; project?: any };
+    [ROUTE.mine]: {};
+    [ROUTE.note]: {};
 }

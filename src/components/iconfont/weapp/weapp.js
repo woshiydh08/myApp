@@ -1,6 +1,6 @@
 Component({
   properties: {
-    // icon-shouye-zhihui | icon-shouye | icon-gongneng | icon-xiaoxi2 | icon-wode
+    // icon-shouye-zhihui | icon-home | icon-function | icon-message | icon-mine
     name: {
       type: String,
     },

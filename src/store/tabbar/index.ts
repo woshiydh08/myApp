@@ -5,9 +5,14 @@ interface ImSliceState {
     list: {
         pagePath: string;
         text: string;
-        icon?: string;
-        iconActive?: string;
+        icon: ICON_ENUM;
     }[];
+}
+enum ICON_ENUM {
+    HOME = 'icon-home',
+    FUNCTION = 'icon-function',
+    MESSAGE = 'icon-message',
+    MINE = 'icon-mine',
 }
 const initialState: ImSliceState = {
     active: 'pages/main/home/index',
@@ -15,20 +20,17 @@ const initialState: ImSliceState = {
         {
             pagePath: 'pages/main/home/index',
             text: '首页',
-            icon: 'assets/img/tabbar/home.png',
-            iconActive: 'assets/img/tabbar/home_active.png',
+            icon: ICON_ENUM['HOME'],
         },
         {
             pagePath: 'pages/main/articles/index',
             text: '文章',
-            icon: 'assets/img/tabbar/home.png',
-            iconActive: 'assets/img/tabbar/home_active.png',
+            icon: ICON_ENUM['FUNCTION'],
         },
         {
             pagePath: 'pages/main/mine/index',
             text: '我的',
-            icon: 'assets/img/tabbar/my.png',
-            iconActive: 'assets/img/tabbar/my_active.png',
+            icon: ICON_ENUM['MINE'],
         },
     ],
 };

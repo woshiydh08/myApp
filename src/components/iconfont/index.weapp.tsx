@@ -4,7 +4,7 @@
 import React, { FunctionComponent } from 'react';
 import Taro from '@tarojs/taro';
 
-export type IconNames = 'icon-shouye-zhihui' | 'icon-shouye' | 'icon-gongneng' | 'icon-xiaoxi2' | 'icon-wode';
+export type IconNames = 'icon-shouye-zhihui' | 'icon-home' | 'icon-function' | 'icon-message' | 'icon-mine';
 
 interface Props {
   name: IconNames;

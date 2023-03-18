@@ -11,7 +11,6 @@ import {
     useUnload,
 } from '@tarojs/taro';
 
-import IconFont from '@components/iconfont';
 
 import './index.less';
 
@@ -44,9 +43,7 @@ export default function Index() {
     });
     return (
         <View className='index'>
-            <view>
-                <IconFont name='icon-wode'  size={40} />
-            </view>
+            <view></view>
             <View>123111111</View>
         </View>
     );
